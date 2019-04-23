@@ -636,12 +636,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Uxet.Com\Uxnet.Com.csproj">
-      <Project>{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}</Project>
-      <Name>Uxnet.Com</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
@@ -660,7 +654,12 @@
       <CachedSettingsPropName>Uxnet_Web_WS_DocumentService_DocumentCreator</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Uxnet.Com\Uxnet.Com.csproj">
+      <Project>{72edd90c-e7fe-44f4-8b9b-c9512f02d547}</Project>
+      <Name>Uxnet.Com</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

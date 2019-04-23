@@ -447,7 +447,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Uxet.Com\Uxnet.Com.csproj">
+    <ProjectReference Include="..\Uxnet.Com\Uxnet.Com.csproj">
       <Project>{72edd90c-e7fe-44f4-8b9b-c9512f02d547}</Project>
       <Name>Uxnet.Com</Name>
     </ProjectReference>

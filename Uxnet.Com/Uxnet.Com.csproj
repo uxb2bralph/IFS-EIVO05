@@ -308,8 +308,8 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Uxet.ToolAdapter\Uxnet.ToolAdapter.csproj">
-      <Project>{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}</Project>
+    <ProjectReference Include="..\Uxnet.ToolAdapter\Uxnet.ToolAdapter.csproj">
+      <Project>{b3ae4afa-632c-493a-ac5a-9e6b7f9a2b30}</Project>
       <Name>Uxnet.ToolAdapter</Name>
     </ProjectReference>
   </ItemGroup>

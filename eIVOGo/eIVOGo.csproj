@@ -3171,11 +3171,11 @@
       <Project>{2f1547b6-2dd4-4a57-a40f-258103591603}</Project>
       <Name>Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Uxet.Com\Uxnet.Com.csproj">
+    <ProjectReference Include="..\Uxnet.Com\Uxnet.Com.csproj">
       <Project>{72edd90c-e7fe-44f4-8b9b-c9512f02d547}</Project>
       <Name>Uxnet.Com</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Uxet.Web\Uxnet.Web.csproj">
+    <ProjectReference Include="..\Uxnet.Web\Uxnet.Web.csproj">
       <Project>{44839c05-8a69-4331-89eb-761509cd68eb}</Project>
       <Name>Uxnet.Web</Name>
     </ProjectReference>
