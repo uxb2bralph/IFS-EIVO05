@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="eIVOCenter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="NotifyActivation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/NotifyMemberActivation.aspx</Value>
+    </Setting>
+    <Setting Name="NotifyToIssue" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/NotifyToIssueInvoice.aspx</Value>
+    </Setting>
+    <Setting Name="NotifyToReceive" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/NotifyToReceiveInvoice.aspx</Value>
+    </Setting>
+    <Setting Name="PDFWorkingQueue" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\UXB2B_EIVO\PDFQueue</Value>
+    </Setting>
+    <Setting Name="UseSSL" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

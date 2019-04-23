@@ -1,0 +1,1705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B11DCD8-FAD5-4A8D-A833-9D682349C363}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eIVOCenter</RootNamespace>
+    <AssemblyName>eIVOCenter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.5.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.7.1213\lib\45\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AjaxMin, Version=4.97.4951.28478, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=2.1.0.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.2.1.0.3\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper\BusinessCounterpartUploadManager.cs" />
+    <Compile Include="Helper\ExtensionMethods.cs" />
+    <Compile Include="Helper\BusinessCounterpartXmlUploadManager.cs" />
+    <Compile Include="Module\Base\InvoiceAllowanceList.ascx.cs">
+      <DependentUpon>InvoiceAllowanceList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Base\InvoiceAllowanceList.ascx.designer.cs">
+      <DependentUpon>InvoiceAllowanceList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Base\InvoiceItemList.ascx.cs">
+      <DependentUpon>InvoiceItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Base\InvoiceItemList.ascx.designer.cs">
+      <DependentUpon>InvoiceItemList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Base\ReceiptItemList.ascx.cs">
+      <DependentUpon>ReceiptItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Base\ReceiptItemList.ascx.designer.cs">
+      <DependentUpon>ReceiptItemList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\AllowanceItemCommonView.ascx.cs">
+      <DependentUpon>AllowanceItemCommonView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\AllowanceItemCommonView.ascx.designer.cs">
+      <DependentUpon>AllowanceItemCommonView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\AllowanceProductItemList.ascx.cs">
+      <DependentUpon>AllowanceProductItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\AllowanceProductItemList.ascx.designer.cs">
+      <DependentUpon>AllowanceProductItemList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\InvoiceProductItemList.ascx.cs">
+      <DependentUpon>InvoiceProductItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\InvoiceProductItemList.ascx.designer.cs">
+      <DependentUpon>InvoiceProductItemList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\InvoiceItemCommonView.ascx.cs">
+      <DependentUpon>InvoiceItemCommonView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\InvoiceItemCommonView.ascx.designer.cs">
+      <DependentUpon>InvoiceItemCommonView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintReceiptForIncome.ascx.cs">
+      <DependentUpon>PrintReceiptForIncome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintReceiptForIncome.ascx.designer.cs">
+      <DependentUpon>PrintReceiptForIncome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintReceiptForSale.ascx.cs">
+      <DependentUpon>PrintReceiptForSale.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintReceiptForSale.ascx.designer.cs">
+      <DependentUpon>PrintReceiptForSale.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiptItemCommonView.ascx.cs">
+      <DependentUpon>ReceiptItemCommonView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiptItemCommonView.ascx.designer.cs">
+      <DependentUpon>ReceiptItemCommonView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiptProductItemList.ascx.cs">
+      <DependentUpon>ReceiptProductItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiptProductItemList.ascx.designer.cs">
+      <DependentUpon>ReceiptProductItemList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveInvoice.ascx.cs">
+      <DependentUpon>ReceiveInvoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveInvoice.ascx.designer.cs">
+      <DependentUpon>ReceiveInvoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveInvoiceCancellation.ascx.cs">
+      <DependentUpon>ReceiveInvoiceCancellation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveInvoiceCancellation.ascx.designer.cs">
+      <DependentUpon>ReceiveInvoiceCancellation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueInvoiceAllowance.ascx.cs">
+      <DependentUpon>IssueInvoiceAllowance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueInvoiceAllowance.ascx.designer.cs">
+      <DependentUpon>IssueInvoiceAllowance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueAllowanceCancellation.ascx.cs">
+      <DependentUpon>IssueAllowanceCancellation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueAllowanceCancellation.ascx.designer.cs">
+      <DependentUpon>IssueAllowanceCancellation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueInvoice.ascx.cs">
+      <DependentUpon>IssueInvoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueInvoice.ascx.designer.cs">
+      <DependentUpon>IssueInvoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueInvoiceCancellation.ascx.cs">
+      <DependentUpon>IssueInvoiceCancellation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueInvoiceCancellation.ascx.designer.cs">
+      <DependentUpon>IssueInvoiceCancellation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveAllowanceCancellation.ascx.cs">
+      <DependentUpon>ReceiveAllowanceCancellation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveAllowanceCancellation.ascx.designer.cs">
+      <DependentUpon>ReceiveAllowanceCancellation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveInvoiceAllowance.ascx.cs">
+      <DependentUpon>ReceiveInvoiceAllowance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveInvoiceAllowance.ascx.designer.cs">
+      <DependentUpon>ReceiveInvoiceAllowance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintInvoiceForSale.ascx.cs">
+      <DependentUpon>PrintInvoiceForSale.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintInvoiceForSale.ascx.designer.cs">
+      <DependentUpon>PrintInvoiceForSale.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintInvoiceForIncome.ascx.cs">
+      <DependentUpon>PrintInvoiceForIncome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintInvoiceForIncome.ascx.designer.cs">
+      <DependentUpon>PrintInvoiceForIncome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintInvoiceAllowanceForIncome.ascx.cs">
+      <DependentUpon>PrintInvoiceAllowanceForIncome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintInvoiceAllowanceForIncome.ascx.designer.cs">
+      <DependentUpon>PrintInvoiceAllowanceForIncome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintInvoiceAllowanceForSale.ascx.cs">
+      <DependentUpon>PrintInvoiceAllowanceForSale.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\PrintInvoiceAllowanceForSale.ascx.designer.cs">
+      <DependentUpon>PrintInvoiceAllowanceForSale.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveReceipt.ascx.cs">
+      <DependentUpon>ReceiveReceipt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveReceipt.ascx.designer.cs">
+      <DependentUpon>ReceiveReceipt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveReceiptCancellation.ascx.cs">
+      <DependentUpon>ReceiveReceiptCancellation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\ReceiveReceiptCancellation.ascx.designer.cs">
+      <DependentUpon>ReceiveReceiptCancellation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueReceipt.ascx.cs">
+      <DependentUpon>IssueReceipt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueReceipt.ascx.designer.cs">
+      <DependentUpon>IssueReceipt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueReceiptCancellation.ascx.cs">
+      <DependentUpon>IssueReceiptCancellation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Action\IssueReceiptCancellation.ascx.designer.cs">
+      <DependentUpon>IssueReceiptCancellation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\AllowancePrintView.ascx.cs">
+      <DependentUpon>AllowancePrintView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\AllowancePrintView.ascx.designer.cs">
+      <DependentUpon>AllowancePrintView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Item\ReceiptProductPrintView.ascx.cs">
+      <DependentUpon>ReceiptProductPrintView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Item\ReceiptProductPrintView.ascx.designer.cs">
+      <DependentUpon>ReceiptProductPrintView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\Item\SOGOReceiptView.ascx.cs">
+      <DependentUpon>SOGOReceiptView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\Item\SOGOReceiptView.ascx.designer.cs">
+      <DependentUpon>SOGOReceiptView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\PNewInvalidInvoicePreview.ascx.cs">
+      <DependentUpon>PNewInvalidInvoicePreview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\PNewInvalidInvoicePreview.ascx.designer.cs">
+      <DependentUpon>PNewInvalidInvoicePreview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\RelativeBuyer\DeleverInvoice.ascx.cs">
+      <DependentUpon>DeleverInvoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\RelativeBuyer\DeleverInvoice.ascx.designer.cs">
+      <DependentUpon>DeleverInvoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\RelativeBuyer\InquireInvoiceForDelevering.ascx.cs">
+      <DependentUpon>InquireInvoiceForDelevering.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\RelativeBuyer\InquireInvoiceForDelevering.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceForDelevering.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\RelativeBuyer\InquireInvoiceForReceiving.ascx.cs">
+      <DependentUpon>InquireInvoiceForReceiving.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\RelativeBuyer\InquireInvoiceForReceiving.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceForReceiving.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\AppSigner.cs" />
+    <Compile Include="Module\EIVO\RelativeBuyer\ReceiveInvoice.ascx.cs">
+      <DependentUpon>ReceiveInvoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\RelativeBuyer\ReceiveInvoice.ascx.designer.cs">
+      <DependentUpon>ReceiveInvoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\TodoCheck\CheckBuyerInvoice.ascx.cs">
+      <DependentUpon>CheckBuyerInvoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\TodoCheck\CheckBuyerInvoice.ascx.designer.cs">
+      <DependentUpon>CheckBuyerInvoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\EIVO\TodoList.ascx.cs">
+      <DependentUpon>TodoList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\EIVO\TodoList.ascx.designer.cs">
+      <DependentUpon>TodoList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Entity\CALogItem.ascx.cs">
+      <DependentUpon>CALogItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Entity\CALogItem.ascx.designer.cs">
+      <DependentUpon>CALogItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowBranchItem.ascx.cs">
+      <DependentUpon>DocumentFlowBranchItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowBranchItem.ascx.designer.cs">
+      <DependentUpon>DocumentFlowBranchItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowBranchList.ascx.cs">
+      <DependentUpon>DocumentFlowBranchList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowBranchList.ascx.designer.cs">
+      <DependentUpon>DocumentFlowBranchList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowControlSelector.ascx.cs">
+      <DependentUpon>DocumentFlowControlSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowControlSelector.ascx.designer.cs">
+      <DependentUpon>DocumentFlowControlSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowItem.ascx.cs">
+      <DependentUpon>DocumentFlowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowItem.ascx.designer.cs">
+      <DependentUpon>DocumentFlowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowList.ascx.cs">
+      <DependentUpon>DocumentFlowList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowList.ascx.designer.cs">
+      <DependentUpon>DocumentFlowList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowControlList.ascx.cs">
+      <DependentUpon>DocumentFlowControlList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowControlList.ascx.designer.cs">
+      <DependentUpon>DocumentFlowControlList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowControlItem.ascx.cs">
+      <DependentUpon>DocumentFlowControlItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentFlowControlItem.ascx.designer.cs">
+      <DependentUpon>DocumentFlowControlItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentTypeFlowList.ascx.cs">
+      <DependentUpon>DocumentTypeFlowList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentTypeFlowList.ascx.designer.cs">
+      <DependentUpon>DocumentTypeFlowList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentTypeFlowItem.ascx.cs">
+      <DependentUpon>DocumentTypeFlowItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Flow\DocumentTypeFlowItem.ascx.designer.cs">
+      <DependentUpon>DocumentTypeFlowItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireInvoiceItem.ascx.cs">
+      <DependentUpon>InquireInvoiceItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireInvoiceItem.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireInvoiceItemDownloadLog.ascx.cs">
+      <DependentUpon>InquireInvoiceItemDownloadLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireInvoiceItemDownloadLog.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceItemDownloadLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireReceiptCancellationItem.ascx.cs">
+      <DependentUpon>InquireReceiptCancellationItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireReceiptCancellationItem.ascx.designer.cs">
+      <DependentUpon>InquireReceiptCancellationItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireReceiptItem.ascx.cs">
+      <DependentUpon>InquireReceiptItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireReceiptItem.ascx.designer.cs">
+      <DependentUpon>InquireReceiptItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireResendInvoiceCancellation.ascx.cs">
+      <DependentUpon>InquireResendInvoiceCancellation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireResendInvoiceCancellation.ascx.designer.cs">
+      <DependentUpon>InquireResendInvoiceCancellation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireResendInvoiceItem.ascx.cs">
+      <DependentUpon>InquireResendInvoiceItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireResendInvoiceItem.ascx.designer.cs">
+      <DependentUpon>InquireResendInvoiceItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireResendReceiptCancellationItem.ascx.cs">
+      <DependentUpon>InquireResendReceiptCancellationItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireResendReceiptCancellationItem.ascx.designer.cs">
+      <DependentUpon>InquireResendReceiptCancellationItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireResendReceiptItem.ascx.cs">
+      <DependentUpon>InquireResendReceiptItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireResendReceiptItem.ascx.designer.cs">
+      <DependentUpon>InquireResendReceiptItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireAllowanceCancellationForSale.ascx.cs">
+      <DependentUpon>InquireAllowanceCancellationForSale.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireAllowanceCancellationForSale.ascx.designer.cs">
+      <DependentUpon>InquireAllowanceCancellationForSale.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireInvoiceAllowanceForSale.ascx.cs">
+      <DependentUpon>InquireInvoiceAllowanceForSale.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireInvoiceAllowanceForSale.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceAllowanceForSale.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireInvoiceCancellationForSale.ascx.cs">
+      <DependentUpon>InquireInvoiceCancellationForSale.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireInvoiceCancellationForSale.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceCancellationForSale.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireInvoiceItemForSale.ascx.cs">
+      <DependentUpon>InquireInvoiceItemForSale.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireInvoiceItemForSale.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceItemForSale.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireInvoiceItemForIncome.ascx.cs">
+      <DependentUpon>InquireInvoiceItemForIncome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireInvoiceItemForIncome.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceItemForIncome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireInvoiceAllowanceForIncome.ascx.cs">
+      <DependentUpon>InquireInvoiceAllowanceForIncome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireInvoiceAllowanceForIncome.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceAllowanceForIncome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireReceiptForIncome.ascx.cs">
+      <DependentUpon>InquireReceiptForIncome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireReceiptForIncome.ascx.designer.cs">
+      <DependentUpon>InquireReceiptForIncome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireReceiptForSale.ascx.cs">
+      <DependentUpon>InquireReceiptForSale.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\InquireReceiptForSale.ascx.designer.cs">
+      <DependentUpon>InquireReceiptForSale.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\MasterBusinessInquireInvoiceItemForIncome.ascx.cs">
+      <DependentUpon>MasterBusinessInquireInvoiceItemForIncome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForPrint\MasterBusinessInquireInvoiceItemForIncome.ascx.designer.cs">
+      <DependentUpon>MasterBusinessInquireInvoiceItemForIncome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireAllowanceCancellationItem.ascx.cs">
+      <DependentUpon>InquireAllowanceCancellationItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireAllowanceCancellationItem.ascx.designer.cs">
+      <DependentUpon>InquireAllowanceCancellationItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceAllowanceItem.ascx.cs">
+      <DependentUpon>InquireInvoiceAllowanceItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceAllowanceItem.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceAllowanceItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceCancellationItem.ascx.cs">
+      <DependentUpon>InquireInvoiceCancellationItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceCancellationItem.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceCancellationItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceForReceiving.ascx.cs">
+      <DependentUpon>InquireInvoiceForReceiving.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceForReceiving.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceForReceiving.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceItem.ascx.cs">
+      <DependentUpon>InquireInvoiceItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceItem.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptCancellationForReceiving.ascx.cs">
+      <DependentUpon>InquireReceiptCancellationForReceiving.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptCancellationForReceiving.ascx.designer.cs">
+      <DependentUpon>InquireReceiptCancellationForReceiving.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptCancellationItem.ascx.cs">
+      <DependentUpon>InquireReceiptCancellationItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptCancellationItem.ascx.designer.cs">
+      <DependentUpon>InquireReceiptCancellationItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptForReceiving.ascx.cs">
+      <DependentUpon>InquireReceiptForReceiving.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptForReceiving.ascx.designer.cs">
+      <DependentUpon>InquireReceiptForReceiving.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptItem.ascx.cs">
+      <DependentUpon>InquireReceiptItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptItem.ascx.designer.cs">
+      <DependentUpon>InquireReceiptItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InvoiceAllowanceQueryList.ascx.cs">
+      <DependentUpon>InvoiceAllowanceQueryList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InvoiceAllowanceQueryList.ascx.designer.cs">
+      <DependentUpon>InvoiceAllowanceQueryList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InvoiceItemQueryList.ascx.cs">
+      <DependentUpon>InvoiceItemQueryList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InvoiceItemQueryList.ascx.designer.cs">
+      <DependentUpon>InvoiceItemQueryList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\QueryCALogList.ascx.cs">
+      <DependentUpon>QueryCALogList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\QueryCALogList.ascx.designer.cs">
+      <DependentUpon>QueryCALogList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\QueryInvoiceAndAllowance.ascx.cs">
+      <DependentUpon>QueryInvoiceAndAllowance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\QueryInvoiceAndAllowance.ascx.designer.cs">
+      <DependentUpon>QueryInvoiceAndAllowance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceItemForBuyer.ascx.cs">
+      <DependentUpon>InquireInvoiceItemForBuyer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceItemForBuyer.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceItemForBuyer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceCancellationForReceiving.ascx.cs">
+      <DependentUpon>InquireInvoiceCancellationForReceiving.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceCancellationForReceiving.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceCancellationForReceiving.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceAllowanceForIssuing.ascx.cs">
+      <DependentUpon>InquireInvoiceAllowanceForIssuing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceAllowanceForIssuing.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceAllowanceForIssuing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireAllowanceCancellationForIssuing.ascx.cs">
+      <DependentUpon>InquireAllowanceCancellationForIssuing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireAllowanceCancellationForIssuing.ascx.designer.cs">
+      <DependentUpon>InquireAllowanceCancellationForIssuing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceForIssuing.ascx.cs">
+      <DependentUpon>InquireInvoiceForIssuing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceForIssuing.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceForIssuing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceCancellationForIssuing.ascx.cs">
+      <DependentUpon>InquireInvoiceCancellationForIssuing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceCancellationForIssuing.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceCancellationForIssuing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireAllowanceCancellationForReceiving.ascx.cs">
+      <DependentUpon>InquireAllowanceCancellationForReceiving.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireAllowanceCancellationForReceiving.ascx.designer.cs">
+      <DependentUpon>InquireAllowanceCancellationForReceiving.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceAllowanceForReceiving.ascx.cs">
+      <DependentUpon>InquireInvoiceAllowanceForReceiving.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireInvoiceAllowanceForReceiving.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceAllowanceForReceiving.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireInvoiceAllowance.ascx.cs">
+      <DependentUpon>InquireInvoiceAllowance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireInvoiceAllowance.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceAllowance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireInvoiceCancellation.ascx.cs">
+      <DependentUpon>InquireInvoiceCancellation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireInvoiceCancellation.ascx.designer.cs">
+      <DependentUpon>InquireInvoiceCancellation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireAllowanceCancellation.ascx.cs">
+      <DependentUpon>InquireAllowanceCancellation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\ForOP\InquireAllowanceCancellation.ascx.designer.cs">
+      <DependentUpon>InquireAllowanceCancellation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptCancellationForIssuing.ascx.cs">
+      <DependentUpon>InquireReceiptCancellationForIssuing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptCancellationForIssuing.ascx.designer.cs">
+      <DependentUpon>InquireReceiptCancellationForIssuing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptForIssuing.ascx.cs">
+      <DependentUpon>InquireReceiptForIssuing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inquiry\InquireReceiptForIssuing.ascx.designer.cs">
+      <DependentUpon>InquireReceiptForIssuing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ListView\CALogList.ascx.cs">
+      <DependentUpon>CALogList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\ListView\CALogList.ascx.designer.cs">
+      <DependentUpon>CALogList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\EnterpriseGroupMemberItem.ascx.cs">
+      <DependentUpon>EnterpriseGroupMemberItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\Business\EnterpriseGroupMemberItem.ascx.designer.cs">
+      <DependentUpon>EnterpriseGroupMemberItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\OrganizationList.ascx.cs">
+      <DependentUpon>OrganizationList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\Business\OrganizationList.ascx.designer.cs">
+      <DependentUpon>OrganizationList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\GroupMemberSelector.ascx.cs">
+      <DependentUpon>GroupMemberSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\Business\GroupMemberSelector.ascx.designer.cs">
+      <DependentUpon>GroupMemberSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\ImportCounterpartBusiness.ascx.cs">
+      <DependentUpon>ImportCounterpartBusiness.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\Business\ImportCounterpartBusiness.ascx.designer.cs">
+      <DependentUpon>ImportCounterpartBusiness.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\ImportCounterpartBusinessList.ascx.cs">
+      <DependentUpon>ImportCounterpartBusinessList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\Business\ImportCounterpartBusinessList.ascx.designer.cs">
+      <DependentUpon>ImportCounterpartBusinessList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\ImportInvoiceSignature.ascx.cs">
+      <DependentUpon>ImportInvoiceSignature.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\Business\ImportInvoiceSignature.ascx.designer.cs">
+      <DependentUpon>ImportInvoiceSignature.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\InquireBusinessRelationship.ascx.cs">
+      <DependentUpon>InquireBusinessRelationship.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\Business\InquireBusinessRelationship.ascx.designer.cs">
+      <DependentUpon>InquireBusinessRelationship.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\GroupMemberCounterpartBusinessList.ascx.cs">
+      <DependentUpon>GroupMemberCounterpartBusinessList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\Business\GroupMemberCounterpartBusinessList.ascx.designer.cs">
+      <DependentUpon>GroupMemberCounterpartBusinessList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\MaintainBusinessRelationship.ascx.cs">
+      <DependentUpon>MaintainBusinessRelationship.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\Business\MaintainBusinessRelationship.ascx.designer.cs">
+      <DependentUpon>MaintainBusinessRelationship.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\EnterpriseGroupMemberList.ascx.cs">
+      <DependentUpon>EnterpriseGroupMemberList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\Business\EnterpriseGroupMemberList.ascx.designer.cs">
+      <DependentUpon>EnterpriseGroupMemberList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\Business\ImportCounterpartBusinessXml.ascx.cs">
+      <DependentUpon>ImportCounterpartBusinessXml.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\AnnouncementList.ascx.cs">
+      <DependentUpon>AnnouncementList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\AnnouncementList.ascx.designer.cs">
+      <DependentUpon>AnnouncementList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\CreateSystemCertificate.ascx.cs">
+      <DependentUpon>CreateSystemCertificate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\CreateSystemCertificate.ascx.designer.cs">
+      <DependentUpon>CreateSystemCertificate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\Item\AnnouncementItem.ascx.cs">
+      <DependentUpon>AnnouncementItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\Item\AnnouncementItem.ascx.designer.cs">
+      <DependentUpon>AnnouncementItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\UI\Announcement.ascx.cs">
+      <DependentUpon>Announcement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\UI\Announcement.ascx.designer.cs">
+      <DependentUpon>Announcement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\UI\UploadDataExceptionNotification.ascx.cs">
+      <DependentUpon>UploadDataExceptionNotification.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\UI\UploadDataExceptionNotification.ascx.designer.cs">
+      <DependentUpon>UploadDataExceptionNotification.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Published\eInvoiceService.asmx.cs">
+      <DependentUpon>eInvoiceService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Published\GetInvoicePDF.ashx.cs">
+      <DependentUpon>GetInvoicePDF.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Published\PrintSingleInvoiceAsPDF.aspx.cs">
+      <DependentUpon>PrintSingleInvoiceAsPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Published\PrintSingleInvoiceAsPDF.aspx.designer.cs">
+      <DependentUpon>PrintSingleInvoiceAsPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAM\PrintReceiptPage.aspx.cs">
+      <DependentUpon>PrintReceiptPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAM\PrintReceiptPage.aspx.designer.cs">
+      <DependentUpon>PrintReceiptPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Published\SignXmlPage.aspx.cs">
+      <DependentUpon>SignXmlPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Published\SignXmlPage.aspx.designer.cs">
+      <DependentUpon>SignXmlPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SAM\CompanyManager.ascx.cs">
+      <DependentUpon>CompanyManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SAM\CompanyManager.ascx.designer.cs">
+      <DependentUpon>CompanyManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SAM\PrintInvoiceAsPDF.aspx.cs">
+      <DependentUpon>PrintInvoiceAsPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAM\PrintInvoiceAsPDF.aspx.designer.cs">
+      <DependentUpon>PrintInvoiceAsPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAM\PrintAllowanceAsPDF.aspx.cs">
+      <DependentUpon>PrintAllowanceAsPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAM\PrintAllowanceAsPDF.aspx.designer.cs">
+      <DependentUpon>PrintAllowanceAsPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAM\PrintPageAsPDF.aspx.cs">
+      <DependentUpon>PrintPageAsPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAM\PrintPageAsPDF.aspx.designer.cs">
+      <DependentUpon>PrintPageAsPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="services\ServiceWorkItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Visitor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Allowance\eivo.css" />
+    <Content Include="App_Themes\Login\login.css" />
+    <Content Include="App_Themes\Paper\eivo.css" />
+    <Content Include="App_Themes\Paper\Paper_ForUXB2B\eivo.css" />
+    <Content Include="App_Themes\Print\table.css" />
+    <Content Include="App_Themes\Receipt\eivo.css" />
+    <Content Include="App_Themes\Ver2016\eivo.css" />
+    <Content Include="App_Themes\Visitor\body.css" />
+    <Content Include="App_Themes\Visitor\content.css" />
+    <Content Include="App_Themes\Visitor\header.css" />
+    <Content Include="App_Themes\Visitor\images\201412Ad.jpg" />
+    <Content Include="App_Themes\Visitor\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="App_Themes\Visitor\images\ui-bg_glass_100_f5f0e5_1x400.png" />
+    <Content Include="App_Themes\Visitor\images\ui-bg_glass_25_cb842e_1x400.png" />
+    <Content Include="App_Themes\Visitor\images\ui-bg_glass_70_ede4d4_1x400.png" />
+    <Content Include="App_Themes\Visitor\images\ui-bg_highlight-hard_100_f4f0ec_1x100.png" />
+    <Content Include="App_Themes\Visitor\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="App_Themes\Visitor\images\ui-bg_highlight-hard_75_f5f5b5_1x100.png" />
+    <Content Include="App_Themes\Visitor\images\ui-bg_inset-soft_100_f4f0ec_1x100.png" />
+    <Content Include="App_Themes\Visitor\images\ui-icons_c47a23_256x240.png" />
+    <Content Include="App_Themes\Visitor\images\ui-icons_cb672b_256x240.png" />
+    <Content Include="App_Themes\Visitor\images\ui-icons_f08000_256x240.png" />
+    <Content Include="App_Themes\Visitor\images\ui-icons_f35f07_256x240.png" />
+    <Content Include="App_Themes\Visitor\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="App_Themes\Visitor\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="App_Themes\Visitor\jquery-ui-1.8.14.custom.css" />
+    <Content Include="App_Themes\Visitor\left-menu.css" />
+    <Content Include="App_Themes\Visitor\paper.css" />
+    <Content Include="App_Themes\Visitor\StyleSheet.css" />
+    <Content Include="App_Themes\Visitor\table.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="EIVO\CheckTodoList.aspx" />
+    <Content Include="EIVO\DeleverInvoice.aspx" />
+    <Content Include="EIVO\InquireReceiptCancellationItem.aspx" />
+    <Content Include="EIVO\InquireReceiptItem.aspx" />
+    <Content Include="EIVO\OP\InquireInvoiceItem.aspx" />
+    <Content Include="EIVO\OP\InquireInvoiceCancellation.aspx" />
+    <Content Include="EIVO\OP\InquireAllowanceCancellation.aspx" />
+    <Content Include="EIVO\OP\InquireInvoiceAllowance.aspx" />
+    <Content Include="EIVO\OP\InquireInvoiceItemDownloadLog.aspx" />
+    <Content Include="EIVO\OP\InquireReceiptCancellationItem.aspx" />
+    <Content Include="EIVO\OP\InquireReceiptItem.aspx" />
+    <Content Include="EIVO\OP\ResendInvoiceCancellationMail.aspx" />
+    <Content Include="EIVO\OP\ResendInvoiceMail.aspx" />
+    <Content Include="EIVO\OP\ResendReceiptCancellationItemMail.aspx" />
+    <Content Include="EIVO\OP\ResendReceiptItemMail.aspx" />
+    <Content Include="EIVO\PrintInvoiceForSale.aspx" />
+    <Content Include="EIVO\PrintReceiptForIncome.aspx" />
+    <Content Include="EIVO\PrintReceiptForSale.aspx" />
+    <Content Include="EIVO\querySellerInvoiceAndAllowance.aspx" />
+    <Content Include="EIVO\ReceiveInvoice.aspx" />
+    <Content Include="EIVO\ReceiveReceipt.aspx" />
+    <Content Include="EIVO\ReceiveReceiptCancellation.aspx" />
+    <Content Include="EIVO\track_number_list.aspx" />
+    <Content Include="EIVO\InquireAllowanceCancellation.aspx" />
+    <Content Include="EIVO\InquireInvoiceCancellation.aspx" />
+    <Content Include="EIVO\ReceiveInvoiceCancellation.aspx" />
+    <Content Include="EIVO\CreateInvoiceAllowance.aspx" />
+    <Content Include="EIVO\CreateAllowanceCancellation.aspx" />
+    <Content Include="EIVO\IssueInvoiceAllowance.aspx" />
+    <Content Include="EIVO\IssueAllowanceCancellation.aspx" />
+    <Content Include="EIVO\IssueInvoice.aspx" />
+    <Content Include="EIVO\IssueInvoiceCancellation.aspx" />
+    <Content Include="EIVO\ReceiveAllowanceCancellation.aspx" />
+    <Content Include="EIVO\ReceiveInvoiceAllowance.aspx" />
+    <Content Include="EIVO\PrintInvoiceForIncome.aspx" />
+    <Content Include="EIVO\PrintInvoiceAllowanceForIncome.aspx" />
+    <Content Include="EIVO\PrintInvoiceAllowanceForSale.aspx" />
+    <Content Include="EIVO\MasterBusinessPrintInvoiceForIncome.aspx" />
+    <Content Include="EIVO\IssueReceipt.aspx" />
+    <Content Include="EIVO\IssueReceiptCancellation.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\chc-b_2.gif" />
+    <Content Include="images\chc_logo_01.gif" />
+    <Content Include="images\chc_logo_02.gif" />
+    <Content Include="images\chc_logo_03.gif" />
+    <Content Include="images\csc_logo_01.gif" />
+    <Content Include="images\csc_logo_02.gif" />
+    <Content Include="images\csc_logo_03.gif" />
+    <Content Include="images\image019.gif" />
+    <Content Include="images\red_line.gif" />
+    <Content Include="images\run.gif" />
+    <Content Include="images\sogo.gif" />
+    <Content Include="images\sogo_b.gif" />
+    <Content Include="images\sogo_y.gif" />
+    <Content Include="images\stamp2.gif" />
+    <Content Include="images\stamp3.gif" />
+    <Content Include="images\stamp4.gif" />
+    <Content Include="images\unit.gif" />
+    <Content Include="images\崇光百貨-收款專用章-列印用.jpg" />
+    <Content Include="Inquery\queryInvoiceAndAllowance.aspx" />
+    <Content Include="Module\Ajax\PagingControl.ascx" />
+    <Content Include="Module\Base\InvoiceAllowancePrintCheckList.ascx" />
+    <Content Include="Module\Base\InvoiceItemPrintCheckList.ascx" />
+    <Content Include="Module\Base\InvoiceItemList.ascx" />
+    <Content Include="Module\Base\InvoiceItemCheckList.ascx" />
+    <Content Include="Module\Base\AllowanceCancellationCheckList.ascx" />
+    <Content Include="Module\Base\InvoiceCancellationCheckList.ascx" />
+    <Content Include="Module\Base\ReceiptCancellationCheckList.ascx" />
+    <Content Include="Module\Base\ReceiptItemCheckList.ascx" />
+    <Content Include="Module\Base\ReceiptItemList.ascx" />
+    <Content Include="Module\Base\ReceiptItemPrintCheckList.ascx" />
+    <Content Include="Module\Common\CommonScriptManager.ascx" />
+    <Content Include="Module\Common\CrossPageMessage.ascx" />
+    <Content Include="Module\EIVO\Action\AllowanceItemCommonView.ascx" />
+    <Content Include="Module\EIVO\Action\AllowanceProductItemList.ascx" />
+    <Content Include="Module\EIVO\Action\InvoiceProductItemList.ascx" />
+    <Content Include="Module\Common\DataModelCache.ascx" />
+    <Content Include="Module\EIVO\Action\InvoiceItemCommonView.ascx" />
+    <Content Include="Module\EIVO\Action\PrintReceiptForIncome.ascx" />
+    <Content Include="Module\EIVO\Action\PrintReceiptForSale.ascx" />
+    <Content Include="Module\EIVO\Action\ReceiptItemCommonView.ascx" />
+    <Content Include="Module\EIVO\Action\ReceiptProductItemList.ascx" />
+    <Content Include="Module\EIVO\Action\ReceiveInvoice.ascx" />
+    <Content Include="Module\EIVO\Action\ReceiveInvoiceCancellation.ascx" />
+    <Content Include="Module\EIVO\Action\IssueInvoiceAllowance.ascx" />
+    <Content Include="Module\EIVO\Action\IssueAllowanceCancellation.ascx" />
+    <Content Include="Module\EIVO\Action\IssueInvoice.ascx" />
+    <Content Include="Module\EIVO\Action\IssueInvoiceCancellation.ascx" />
+    <Content Include="Module\EIVO\Action\ReceiveAllowanceCancellation.ascx" />
+    <Content Include="Module\EIVO\Action\ReceiveInvoiceAllowance.ascx" />
+    <Content Include="Module\EIVO\Action\PrintInvoiceForSale.ascx" />
+    <Content Include="Module\EIVO\Action\PrintInvoiceForIncome.ascx" />
+    <Content Include="Module\EIVO\Action\PrintInvoiceAllowanceForIncome.ascx" />
+    <Content Include="Module\EIVO\Action\PrintInvoiceAllowanceForSale.ascx" />
+    <Content Include="Module\EIVO\Action\MasterBusinessPrintInvoiceForIncome.ascx" />
+    <Content Include="Module\EIVO\Action\ReceiveReceipt.ascx" />
+    <Content Include="Module\EIVO\Action\ReceiveReceiptCancellation.ascx" />
+    <Content Include="Module\EIVO\Action\IssueReceipt.ascx" />
+    <Content Include="Module\EIVO\Action\IssueReceiptCancellation.ascx" />
+    <Content Include="Module\EIVO\AllowancePrintView.ascx" />
+    <Content Include="Module\EIVO\Business\CounterpartBusinessSelector.ascx" />
+    <Content Include="Module\EIVO\InvoicePrintView2016.ascx" />
+    <Content Include="Module\EIVO\InvoicePrintView80279131.ascx" />
+    <Content Include="Module\EIVO\InvoicePrintView.ascx" />
+    <Content Include="Module\EIVO\Item\AllowancePrintViewPart1.ascx" />
+    <Content Include="Module\EIVO\Item\DefaultInvoiceBalanceView.ascx" />
+    <Content Include="Module\EIVO\Item\DefaultInvoiceReceiptView.ascx" />
+    <Content Include="Module\EIVO\Item\DefaultInvoiceProductPrintView.ascx" />
+    <Content Include="Module\EIVO\Item\AllowancePrintViewPart2.ascx" />
+    <Content Include="Module\EIVO\Item\AllowancePrintViewPart4.ascx" />
+    <Content Include="Module\EIVO\Item\AllowancePrintViewPart3.ascx" />
+    <Content Include="Module\EIVO\Item\InvoiceBalanceView80279131.ascx" />
+    <Content Include="Module\EIVO\Item\InvoiceProductPrintView80279131.ascx" />
+    <Content Include="Module\EIVO\Item\InvoiceView2016.ascx" />
+    <Content Include="Module\EIVO\Item\InvoiceReceiptView80279131.ascx" />
+    <Content Include="Module\EIVO\Item\InvoiceStubView80279131.ascx" />
+    <Content Include="Module\EIVO\Item\InvoiceStubView.ascx" />
+    <Content Include="Module\EIVO\Item\ReceiptProductPrintView.ascx" />
+    <Content Include="Module\EIVO\Item\SogoInvoiceBalanceView.ascx" />
+    <Content Include="Module\EIVO\Item\SogoInvoiceReceiptView.ascx" />
+    <Content Include="Module\EIVO\Item\SogoInvoiceProductPrintView.ascx" />
+    <Content Include="Module\EIVO\Item\SogoInvoiceStubView.ascx" />
+    <Content Include="Module\EIVO\Item\SOGOReceiptView.ascx" />
+    <Content Include="Module\EIVO\Message\NotifyCommissionedToReceiveInvoice.ascx" />
+    <Content Include="Module\EIVO\PNewInvalidInvoicePreview.ascx" />
+    <Content Include="Module\EIVO\RelativeBuyer\DeleverInvoice.ascx" />
+    <Content Include="Module\EIVO\RelativeBuyer\InquireInvoiceForDelevering.ascx" />
+    <Content Include="Module\EIVO\RelativeBuyer\InquireInvoiceForReceiving.ascx" />
+    <Content Include="getPassword_email.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\arrow_01.gif" />
+    <Content Include="images\arrow_02.gif" />
+    <Content Include="images\btn.gif" />
+    <Content Include="images\chs_invoice.gif" />
+    <Content Include="images\code_txt.gif" />
+    <Content Include="images\date.gif" />
+    <Content Include="images\getpw_button_over.gif" />
+    <Content Include="images\getpw_button_up.gif" />
+    <Content Include="images\get_pw_bg.jpg" />
+    <Content Include="images\Google.jpg" />
+    <Content Include="images\header_bg.gif" />
+    <Content Include="images\header_logo.jpg" />
+    <Content Include="images\header_pic.jpg" />
+    <Content Include="images\Head_style_1.gif" />
+    <Content Include="images\hover.png" />
+    <Content Include="images\icon_ca.gif" />
+    <Content Include="images\icon_device.png" />
+    <Content Include="images\icon_join.png" />
+    <Content Include="images\icon_link.png" />
+    <Content Include="images\icon_logout.png" />
+    <Content Include="images\icon_search.gif" />
+    <Content Include="images\icon_search_old.gif" />
+    <Content Include="images\index_bg.jpg" />
+    <Content Include="images\login_button_over.gif" />
+    <Content Include="images\login_button_up.gif" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\menu_buttom.gif" />
+    <Content Include="images\menu_top.gif" />
+    <Content Include="images\paper.gif" />
+    <Content Include="images\path_left.gif" />
+    <Content Include="images\path_right.gif" />
+    <Content Include="images\pub_bg.gif" />
+    <Content Include="images\pub_pic-12.jpg" />
+    <Content Include="images\pub_pic-14.jpg" />
+    <Content Include="images\pub_pic.jpg" />
+    <Content Include="images\sider_bg.gif" />
+    <Content Include="images\sider_title.jpg" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="MainPage.aspx" />
+    <Content Include="Module\Base\InquireEntity.ascx" />
+    <Content Include="Module\Base\InvoiceAllowanceCheckList.ascx" />
+    <Content Include="Module\Base\InvoiceAllowanceList.ascx" />
+    <Content Include="Module\Base\InvoiceTrackCodeList.ascx" />
+    <Content Include="Module\Common\ActionHandler.ascx" />
+    <Content Include="Module\Common\calendar.gif" />
+    <Content Include="Module\Common\calendar.htm" />
+    <Content Include="Module\Common\CalendarInput.ascx" />
+    <Content Include="Module\Common\CalendarInputDatePicker.ascx" />
+    <Content Include="Module\Common\ClearInputField.ascx" />
+    <Content Include="Module\Common\DataModelContainer.ascx" />
+    <Content Include="Module\Common\EnumSelector.ascx" />
+    <Content Include="Module\Common\OpenPrintingButton.ascx" />
+    <Content Include="Module\Common\PageAnchor.ascx" />
+    <Content Include="Module\Common\PagingControl.ascx" />
+    <Content Include="Module\Common\PrintingButton2.ascx" />
+    <Content Include="Module\Common\PrintingButton3.ascx" />
+    <Content Include="Module\Common\PrintInvoiceButton.ascx" />
+    <Content Include="Module\Common\ROCCalendarInput.ascx" />
+    <Content Include="Module\Common\ROC_calendar.htm" />
+    <Content Include="Module\Common\SaveAsExcelButton.ascx" />
+    <Content Include="Module\Common\SignContext.ascx" />
+    <Content Include="Module\Common\WebPageTreeView.ascx" />
+    <Content Include="Module\EIVO\Business\MasterBusinessSelector.ascx" />
+    <Content Include="Module\EIVO\InvoicePaperView.ascx" />
+    <Content Include="Module\EIVO\Item\InvoiceBalanceView.ascx" />
+    <Content Include="Module\EIVO\Item\InvoiceProductPrintView.ascx" />
+    <Content Include="Module\EIVO\Item\InvoiceReceiptView.ascx" />
+    <Content Include="Module\EIVO\Action\PrintInvoicePreview.ascx" />
+    <Content Include="Module\EIVO\RelativeBuyer\ReceiveInvoice.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckBuyerInvoice.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckBuyerInvoiceCancellation.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckBuyerAllowanceCancellation.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckBuyerAllowance.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckBuyerReceipt.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckBuyerReceiptCancellation.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckSellerAllowanceCancellation.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckSellerAllowance.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckSellerInvoice.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckSellerInvoiceCancellation.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckInvoiceSignature.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckSellerReceipt.ascx" />
+    <Content Include="Module\EIVO\TodoCheck\CheckSellerReceiptCancellation.ascx" />
+    <Content Include="Module\EIVO\TodoList.ascx" />
+    <Content Include="Module\EIVO\TrackNumberList.ascx" />
+    <Content Include="Module\EIVO\DefaultInvoicePrintView.ascx" />
+    <Content Include="Module\EIVO\SogoInvoicePrintView.ascx" />
+    <Content Include="Module\Entity\CALogItem.ascx" />
+    <Content Include="Module\Entity\OrganizationEntrustingTokenItem.ascx" />
+    <Content Include="Module\Entity\OrganizationItem.ascx" />
+    <Content Include="Module\Entity\OrganizationTokenItem.ascx" />
+    <Content Include="Module\Entity\UserProfileItem.ascx" />
+    <Content Include="Module\Entity\OrganizationEntrustingTokenView.ascx" />
+    <Content Include="Module\Flow\ApplyFlowBranch.ascx" />
+    <Content Include="Module\Flow\ApplyFlowControl.ascx" />
+    <Content Include="Module\Flow\DocumentFlowBranchItem.ascx" />
+    <Content Include="Module\Flow\DocumentFlowBranchList.ascx" />
+    <Content Include="Module\Flow\DocumentFlowControlSelector.ascx" />
+    <Content Include="Module\Flow\DocumentFlowItem.ascx" />
+    <Content Include="Module\Flow\DocumentFlowList.ascx" />
+    <Content Include="Module\Flow\DocumentFlowControlList.ascx" />
+    <Content Include="Module\Flow\DocumentFlowControlItem.ascx" />
+    <Content Include="Module\Flow\DocumentTypeFlowList.ascx" />
+    <Content Include="Module\Flow\DocumentTypeFlowItem.ascx" />
+    <Content Include="Module\Flow\DocumentTypeFlowCandidateSelector.ascx" />
+    <Content Include="Module\Flow\MaintainDocumentFlow.ascx" />
+    <Content Include="Module\Flow\DocumentFlowSelector.ascx" />
+    <Content Include="Module\Flow\MaintainDocumentTypeFlow.ascx" />
+    <Content Include="Module\Inquiry\AllowanceCancellationList.ascx" />
+    <Content Include="Module\Inquiry\ForOP\DocumentDownloadList.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireInvoiceItem.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireInvoiceItemDownloadLog.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireReceiptCancellationItem.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireReceiptItem.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireResendInvoiceCancellation.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireResendInvoiceItem.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireResendReceiptCancellationItem.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireResendReceiptItem.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InvoiceItemList.ascx" />
+    <Content Include="Module\Inquiry\ForOP\ReceiptCancellationList.ascx" />
+    <Content Include="Module\Inquiry\ForOP\ReceiptItemList.ascx" />
+    <Content Include="Module\Inquiry\ForOP\ResendInvoiceCancellationList.ascx" />
+    <Content Include="Module\Inquiry\ForOP\ResendInvoiceItemList.ascx" />
+    <Content Include="Module\Inquiry\ForOP\ResendReceiptCancellationList.ascx" />
+    <Content Include="Module\Inquiry\ForOP\ResendReceiptItemList.ascx" />
+    <Content Include="Module\Inquiry\ForPrint\InquireAllowanceCancellationForSale.ascx" />
+    <Content Include="Module\Inquiry\ForPrint\InquireInvoiceAllowanceForSale.ascx" />
+    <Content Include="Module\Inquiry\ForPrint\InquireInvoiceCancellationForSale.ascx" />
+    <Content Include="Module\Inquiry\ForPrint\InquireInvoiceItemForSale.ascx" />
+    <Content Include="Module\Inquiry\ForPrint\InquireInvoiceItemForIncome.ascx" />
+    <Content Include="Module\Inquiry\ForPrint\InquireInvoiceAllowanceForIncome.ascx" />
+    <Content Include="Module\Inquiry\ForPrint\InquireReceiptForIncome.ascx" />
+    <Content Include="Module\Inquiry\ForPrint\InquireReceiptForSale.ascx" />
+    <Content Include="Module\Inquiry\ForPrint\MasterBusinessInquireInvoiceItemForIncome.ascx" />
+    <Content Include="Module\Inquiry\InquireAllowanceCancellationItem.ascx" />
+    <Content Include="Module\Inquiry\InquireInvoiceAllowanceItem.ascx" />
+    <Content Include="Module\Inquiry\InquireInvoiceCancellationItem.ascx" />
+    <Content Include="Module\Inquiry\InquireInvoiceForReceiving.ascx" />
+    <Content Include="Module\Inquiry\InquireInvoiceItem.ascx" />
+    <Content Include="Module\Inquiry\InquireReceiptCancellationForReceiving.ascx" />
+    <Content Include="Module\Inquiry\InquireReceiptCancellationItem.ascx" />
+    <Content Include="Module\Inquiry\InquireReceiptForReceiving.ascx" />
+    <Content Include="Module\Inquiry\InquireReceiptItem.ascx" />
+    <Content Include="Module\Inquiry\InvoiceAllowanceList.ascx" />
+    <Content Include="Module\Inquiry\InvoiceAllowanceQueryList.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InvoiceCancellationList.ascx" />
+    <Content Include="Module\Inquiry\InvoiceCancellationList.ascx" />
+    <Content Include="Module\Inquiry\InvoiceItemQueryList.ascx" />
+    <Content Include="Module\Inquiry\Notification\AllowanceCancellationList.ascx" />
+    <Content Include="Module\Inquiry\Notification\InvoiceAllowanceList.ascx" />
+    <Content Include="Module\Inquiry\Notification\InvoiceCancellationList.ascx" />
+    <Content Include="Module\Inquiry\Notification\InvoiceItemList.ascx" />
+    <Content Include="Module\Inquiry\Notification\NotifyToIssueInvoice.ascx" />
+    <Content Include="Module\Inquiry\Notification\NotifyToReceiveInvoice.ascx" />
+    <Content Include="Module\Inquiry\Notification\ReceiptCancellationList.ascx" />
+    <Content Include="Module\Inquiry\Notification\ReceiptItemList.ascx" />
+    <Content Include="Module\Inquiry\QueryCALogList.ascx" />
+    <Content Include="Module\Inquiry\QueryInvoiceAndAllowance.ascx" />
+    <Content Include="Module\Inquiry\InvoiceItemList.ascx" />
+    <Content Include="Module\Inquiry\InquireInvoiceItemForBuyer.ascx" />
+    <Content Include="Module\Inquiry\InquireInvoiceCancellationForReceiving.ascx" />
+    <Content Include="Module\Inquiry\InquireInvoiceAllowanceForIssuing.ascx" />
+    <Content Include="Module\Inquiry\InquireAllowanceCancellationForIssuing.ascx" />
+    <Content Include="Module\Inquiry\InquireInvoiceForIssuing.ascx" />
+    <Content Include="Module\Inquiry\InquireInvoiceCancellationForIssuing.ascx" />
+    <Content Include="Module\Inquiry\InquireAllowanceCancellationForReceiving.ascx" />
+    <Content Include="Module\Inquiry\InquireInvoiceAllowanceForReceiving.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireInvoiceAllowance.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireInvoiceCancellation.ascx" />
+    <Content Include="Module\Inquiry\ForOP\InquireAllowanceCancellation.ascx" />
+    <Content Include="Module\Inquiry\ReceiptCancellationList.ascx" />
+    <Content Include="Module\Inquiry\ReceiptItemList.ascx" />
+    <Content Include="Module\Inquiry\InquireReceiptCancellationForIssuing.ascx" />
+    <Content Include="Module\Inquiry\InquireReceiptForIssuing.ascx" />
+    <Content Include="Module\ListView\CALogList.ascx" />
+    <Content Include="Module\ListView\UserProfileList.ascx" />
+    <Content Include="Module\SAM\Action\ActivateOrganizationToken.ascx" />
+    <Content Include="Module\SAM\Action\CreateInvoiceTrackCode.ascx" />
+    <Content Include="Module\SAM\Action\EditUserProfile.ascx" />
+    <Content Include="Module\SAM\Action\InvoiceTrackCodeMaintenanceList.ascx" />
+    <Content Include="Module\SAM\Action\ModifyInvoiceTrackCode.ascx" />
+    <Content Include="Module\SAM\AddMember.ascx" />
+    <Content Include="Module\SAM\AddSocialWelfareAgencies.ascx" />
+    <Content Include="Module\SAM\Business\EnterpriseGroupMemberItem.ascx" />
+    <Content Include="Module\SAM\Business\OrganizationList.ascx" />
+    <Content Include="Module\SAM\Business\GroupMemberSelector.ascx" />
+    <Content Include="Module\SAM\Business\ImportCounterpartBusiness.ascx" />
+    <Content Include="Module\SAM\Business\ImportCounterpartBusinessList.ascx" />
+    <Content Include="Module\SAM\Business\ImportInvoiceSignature.ascx" />
+    <Content Include="Module\SAM\Business\InquireBusinessRelationship.ascx" />
+    <Content Include="Module\SAM\Business\GroupMemberCounterpartBusinessList.ascx" />
+    <Content Include="Module\SAM\Business\MaintainBusinessRelationship.ascx" />
+    <Content Include="Module\SAM\Business\EnterpriseGroupMemberList.ascx" />
+    <Content Include="Module\SAM\Business\EnterpriseGroupSelector.ascx" />
+    <Content Include="Module\SAM\Business\EnterpriseCounterpartBusinessList.ascx" />
+    <Content Include="Module\SAM\Business\ImportCounterpartBusinessXml.ascx" />
+    <Content Include="Module\SAM\Business\ImportCounterpartBusinessXmlList.ascx" />
+    <Content Include="Module\SAM\CAContentDetail.ascx" />
+    <Content Include="Module\SAM\CAContentDetailPKCS7.ascx" />
+    <Content Include="Module\SAM\CardBelong.ascx" />
+    <Content Include="Module\SAM\CardManager.ascx" />
+    <Content Include="Module\SAM\CheckSequentialNo.ascx" />
+    <Content Include="Module\SAM\OrganizationManager.ascx" />
+    <Content Include="Module\SAM\CreateCompany.ascx" />
+    <Content Include="Module\SAM\CreateMember.ascx" />
+    <Content Include="Module\SAM\CreateOrganizationCertificate.ascx" />
+    <Content Include="Module\SAM\DataMaintenanceList.ascx" />
+    <Content Include="Module\SAM\EditMember.ascx" />
+    <Content Include="Module\SAM\EditMyself.ascx" />
+    <Content Include="Module\SAM\EditOrganization.ascx" />
+    <Content Include="Module\SAM\EditUserProfile.ascx" />
+    <Content Include="Module\SAM\EditWinningNumber.ascx" />
+    <Content Include="Module\SAM\ExceptionLogList.ascx" />
+    <Content Include="Module\SAM\Handler\EditInvoiceTrackCode.ascx" />
+    <Content Include="Module\SAM\ImportWinner.ascx" />
+    <Content Include="Module\SAM\InvoiceClientStatusList.ascx" />
+    <Content Include="Module\SAM\Invoice\CreateInvoiceNoInterval.ascx" />
+    <Content Include="Module\SAM\Invoice\InvoiceNoIntervalItem.ascx" />
+    <Content Include="Module\SAM\Invoice\InvoiceNoIntervalNoList.ascx" />
+    <Content Include="Module\SAM\Invoice\EditInvoiceNoIntervalModal.ascx" />
+    <Content Include="Module\SAM\Invoice\TrackCodeYearSelector.ascx" />
+    <Content Include="Module\SAM\Invoice\TrackCodePeriodSelector.ascx" />
+    <Content Include="Module\SAM\Invoice\SpecifiedTrackCodePeriodSelector.ascx" />
+    <Content Include="Module\SAM\Invoice\TrackCodeSelector.ascx" />
+    <Content Include="Module\SAM\Invoice\EditInvoiceNoIntervalItem.ascx" />
+    <Content Include="Module\SAM\Invoice\EditInvoiceNoInterval.ascx" />
+    <Content Include="Module\SAM\MemberManager.ascx" />
+    <Content Include="Module\SAM\MemberManager1.ascx" />
+    <Content Include="Module\SAM\ModifyMember.ascx" />
+    <Content Include="Module\SAM\ModifySocialWelfareAgencies.ascx" />
+    <Content Include="Module\SAM\Register.ascx" />
+    <Content Include="Module\SAM\ShowTimeModal.ascx" />
+    <Content Include="Module\SAM\ShowTimeModal2.ascx" />
+    <Content Include="Module\SAM\SocialWelfareAgenciesManger.ascx" />
+    <Content Include="Module\SAM\SystemMonitorControl.ascx" />
+    <Content Include="Module\SAM\UserProfileEntityManager.ascx" />
+    <Content Include="Module\SAM\UXB2BCardGen.ascx" />
+    <Content Include="Module\SAM\WinningNumbersManager.ascx" />
+    <Content Include="Module\SAM\Invoice\InvoiceNoIntervalManager.ascx" />
+    <Content Include="Module\SAM\CAContentDetailXmlSig.ascx" />
+    <Content Include="Module\SAM\CAContentDetailCA.ascx" />
+    <Content Include="Module\SAM\CAContentDetailUserAction.ascx" />
+    <Content Include="Module\SAM\CAContentDetailCommissionedToReceive.ascx" />
+    <Content Include="Module\SAM\CAContentDetailCommissionedToIssue.ascx" />
+    <Content Include="Module\SYS\AnnouncementList.ascx" />
+    <Content Include="Module\SYS\CategoryDefinitionList.ascx" />
+    <Content Include="Module\SYS\CreateSystemCertificate.ascx" />
+    <Content Include="Module\SYS\EditMemberMenuItem.ascx" />
+    <Content Include="Module\SYS\EditMemberMenuPopupModal.ascx" />
+    <Content Include="Module\SYS\FunctionItem.ascx" />
+    <Content Include="Module\SYS\Item\AnnouncementItem.ascx" />
+    <Content Include="Module\SYS\Item\CategoryDefinitionItem.ascx" />
+    <Content Include="Module\SYS\Item\MemberUserRoleItem.ascx" />
+    <Content Include="Module\SYS\Item\MenuControlItem.ascx" />
+    <Content Include="Module\SYS\Item\OrgaCateSelector.ascx" />
+    <Content Include="Module\SYS\Item\OrganizationCategoryItem.ascx" />
+    <Content Include="Module\SYS\Item\OrganizationCategoryUserRoleItem.ascx" />
+    <Content Include="Module\SYS\Item\UserMenuItem.ascx" />
+    <Content Include="Module\SYS\Item\UserProfileItem.ascx" />
+    <Content Include="Module\SYS\Item\UserRoleDefinitionItem.ascx" />
+    <Content Include="Module\SYS\Item\UserRoleItem.ascx" />
+    <Content Include="Module\SYS\MaintainAnnouncement.ascx" />
+    <Content Include="Module\SYS\MaintainCategoryDefinition.ascx" />
+    <Content Include="Module\SYS\MaintainMemberUserRole.ascx" />
+    <Content Include="Module\SYS\MaintainMenuControl.ascx" />
+    <Content Include="Module\SYS\MaintainMenuNodes.ascx" />
+    <Content Include="Module\SYS\MaintainOrganizationCategory.ascx" />
+    <Content Include="Module\SYS\MaintainUserMenu.ascx" />
+    <Content Include="Module\SYS\MaintainUserProfile.ascx" />
+    <Content Include="Module\SYS\MaintainUserProfileByMemberAdmin.ascx" />
+    <Content Include="Module\SYS\MaintainUserRole.ascx" />
+    <Content Include="Module\SYS\MaintainUserRoleDefinition.ascx" />
+    <Content Include="Module\SYS\MenuControlList.ascx" />
+    <Content Include="Module\SYS\MenuFactory.ascx" />
+    <Content Include="Module\SYS\OrganizationCategoryList.ascx" />
+    <Content Include="Module\SYS\OrganizationCategoryUserRoleList.ascx" />
+    <Content Include="Module\SYS\UserMenuList.ascx" />
+    <Content Include="Module\SYS\UserProfileList.ascx" />
+    <Content Include="Module\SYS\UserProfileListByMemberAdmin.ascx" />
+    <Content Include="Module\SYS\UserRoleDefinitionList.ascx" />
+    <Content Include="Module\SYS\UserRoleList.ascx" />
+    <Content Include="Module\ToolBox\AssignableCategorySelector.ascx" />
+    <Content Include="Module\ToolBox\AssignableUserRoleSelector.ascx" />
+    <Content Include="Module\ToolBox\OrganizationCategorySelector.ascx" />
+    <Content Include="Module\UI\Announcement.ascx" />
+    <Content Include="Module\UI\CALogForInvoiceItem.ascx" />
+    <Content Include="Module\UI\CALogForPKCS7.ascx" />
+    <Content Include="Module\UI\CaptchaImg.ascx" />
+    <Content Include="Module\UI\CAUserSelector.ascx" />
+    <Content Include="Module\UI\EmptyDataRow.ascx" />
+    <Content Include="Module\UI\DynamicAddTextbox.ascx" />
+    <Content Include="Module\UI\FunctionTitleBar.ascx" />
+    <Content Include="Module\UI\GovPlatformNotification.ascx" />
+    <Content Include="Module\UI\InvoiceSellerSelector.ascx" />
+    <Content Include="Module\UI\MainTitle.ascx" />
+    <Content Include="Module\UI\PageAction.ascx" />
+    <Content Include="Module\UI\PageMenuBar.ascx" />
+    <Content Include="Module\UI\PopupModal.ascx" />
+    <Content Include="Module\UI\PopupModalMessage.ascx" />
+    <Content Include="Module\UI\PopupModalNoUpdatePanel.ascx" />
+    <Content Include="Module\UI\PopupModalStyle.ascx" />
+    <Content Include="Module\UI\PupopModalFrame.ascx" />
+    <Content Include="Module\UI\RegisterMessage.ascx" />
+    <Content Include="Module\UI\SellerSelector.ascx" />
+    <Content Include="Module\UI\SiteMenuBar.ascx" />
+    <Content Include="Module\UI\SocialWelfareSetup.ascx" />
+    <Content Include="Module\UI\TrackCodeYearSelector.ascx" />
+    <Content Include="Module\UI\TwiceMonthlyPeriod.ascx" />
+    <Content Include="Module\UI\UploadDataExceptionNotification.ascx" />
+    <Content Include="Module\UI\UXB2BCardGenMessage.ascx" />
+    <Content Include="Module\UI\WaitEventClientModal.ascx" />
+    <Content Include="Module\UI\WaitEventModal.ascx" />
+    <Content Include="Module\UI\EnterpriseGroupMemberSelector.ascx" />
+    <Content Include="Published\CAUsageNote.aspx" />
+    <Content Include="Published\ContentPage.aspx" />
+    <Content Include="Published\DataUploadExceptionNotificationPage.aspx" />
+    <Content Include="Published\eInvoiceService.asmx" />
+    <Content Include="Published\GovPlatformNotificationPage.aspx" />
+    <Content Include="Published\IEXmlView.xslt" />
+    <Content Include="Published\NotifyAll.aspx" />
+    <Content Include="Published\NotifyMemberActivation.aspx" />
+    <Content Include="Published\PrintSingleInvoiceAsPDF.aspx" />
+    <Content Include="Published\PrintSingleInvoicePage2016.aspx" />
+    <Content Include="Published\PrintSingleInvoicePage.aspx" />
+    <Content Include="Published\Promotion\Content\Images\201412Ad.jpg" />
+    <Content Include="Published\Promotion\Content\Images\eDM_04_20150415_web.jpg" />
+    <Content Include="Published\TestCA.aspx" />
+    <Content Include="Published\view_data.aspx" />
+    <Content Include="Published\view_data2.aspx" />
+    <Content Include="resource\CenterMasterSimpleMenu.xml" />
+    <Content Include="resource\SuperAdminMenu.xml" />
+    <Content Include="SAM\ListOrganization.aspx" />
+    <Content Include="SAM\OrganizationManager.aspx" />
+    <Content Include="SAM\CreateOrganizationEntrustingCertificate.aspx" />
+    <Content Include="SAM\EditUserProfile.aspx" />
+    <Content Include="SAM\PrintReceiptPage.aspx" />
+    <Content Include="Published\PrintControlPage.aspx" />
+    <Content Include="Published\PrintPage.aspx" />
+    <Content Include="Published\SignXmlPage.aspx" />
+    <Content Include="Published\TestPage.aspx" />
+    <Content Include="Published\TestPage2.aspx" />
+    <Content Include="Published\Uxnet.Distribute.dll" />
+    <Content Include="Published\NotifyToIssueInvoice.aspx" />
+    <Content Include="Published\NotifyToReceiveInvoice.aspx" />
+    <Content Include="resource\AllMenu.xml" />
+    <Content Include="resource\BuyerMenu.xml" />
+    <Content Include="resource\GoogleTWMenu.xml" />
+    <Content Include="resource\MemAdminMenu.xml" />
+    <Content Include="resource\MemberAdmin.xml" />
+    <Content Include="resource\MemerMenu.xml" />
+    <Content Include="resource\MenuTransformer.xsl" />
+    <Content Include="resource\NetworkSellerMenu.xml" />
+    <Content Include="resource\SellerMenu.xml" />
+    <Content Include="resource\SysAdminMenu.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="resource\VisitorMenu.xml" />
+    <Content Include="resource\WaitForCheckMenu.xml" />
+    <Content Include="resource\CenterMasterMenu.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="resource\BusinessMemberMenu.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SAM\AddCompany.aspx" />
+    <Content Include="SAM\AddInvoiceTrackCode.aspx" />
+    <Content Include="SAM\addMember.aspx" />
+    <Content Include="SAM\addSocialWelfareAgencies.aspx" />
+    <Content Include="SAM\CAContentShow.aspx" />
+    <Content Include="SAM\CAContentShowPKCS7.aspx" />
+    <Content Include="SAM\cardBelong.aspx" />
+    <Content Include="SAM\cardManager.aspx" />
+    <Content Include="SAM\CheckSequentialInvoiceNo.aspx" />
+    <Content Include="Module\SAM\CompanyManager.ascx" />
+    <Content Include="SAM\CompanyManager.aspx" />
+    <Content Include="SAM\CreateCertificateIdentity.aspx" />
+    <Content Include="SAM\CreateConsumerMember.aspx" />
+    <Content Include="SAM\EditCompany.aspx" />
+    <Content Include="SAM\EditInvoiceTrackCode.aspx" />
+    <Content Include="SAM\EditMember.aspx" />
+    <Content Include="SAM\EditMyself.aspx" />
+    <Content Include="SAM\EditWinningNumber.aspx" />
+    <Content Include="SAM\ImportWinner.aspx" />
+    <Content Include="SAM\memberManager.aspx" />
+    <Content Include="SAM\modifyMember.aspx" />
+    <Content Include="SAM\modifySocialWelfareAgencies.aspx" />
+    <Content Include="SAM\PrintAllowancePage.aspx" />
+    <Content Include="SAM\PrintInvoiceAsPDF.aspx" />
+    <Content Include="SAM\PrintInvoicePage.aspx" />
+    <Content Include="SAM\PrintInvoices.aspx" />
+    <Content Include="SAM\queryCALog.aspx" />
+    <Content Include="SAM\queryCALog_list.aspx" />
+    <Content Include="SAM\QueryInvoiceAndAllowanceBySysop.aspx" />
+    <Content Include="SAM\register.aspx" />
+    <Content Include="SAM\register_msg.aspx" />
+    <Content Include="SAM\ResetDownloadInvoiceAndAllowance.aspx" />
+    <Content Include="SAM\SocialWelfareAgenciesManger.aspx" />
+    <Content Include="SAM\SystemMonitor.aspx" />
+    <Content Include="SAM\UserProfileManager.aspx" />
+    <Content Include="SAM\UXB2BCardGen_msg.aspx" />
+    <Content Include="SAM\WinningNumbersManager.aspx" />
+    <Content Include="SAM\InquireBusinessRelationship.aspx" />
+    <Content Include="SAM\MaintainBusinessRelationship.aspx" />
+    <Content Include="SAM\ImportCounterpartBusiness.aspx" />
+    <Content Include="SAM\MaintainInvoiceNoInterval.aspx" />
+    <Content Include="SAM\CreateInvoiceNoInterval.aspx" />
+    <Content Include="SAM\EditInvoiceNoInterval.aspx" />
+    <Content Include="SAM\ImportInvoiceSignature.aspx" />
+    <Content Include="SAM\PrintAllowanceAsPDF.aspx" />
+    <Content Include="SAM\CreateMemberCertificate.aspx" />
+    <Content Include="SAM\PrintPageAsPDF.aspx" />
+    <Content Include="SAM\PrintReceiptAsPDF.aspx" />
+    <Content Include="SAM\ActivateOrganizationToken.aspx" />
+    <Content Include="SAM\ImportCounterpartBusinessXml.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.11.3.intellisense.js" />
+    <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="_test\DemoPrintInvoicePage.aspx" />
+    <Content Include="_test\RunConsole.aspx" />
+    <Content Include="_test\TestA0501.aspx" />
+    <Content Include="_test\TestAll.aspx" />
+    <Content Include="SAM\Helper\ResetGroup.ashx" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Scripts\showYear.js" />
+    <Content Include="Scripts\swapImg.js" />
+    <Content Include="Seal\53147117.jpg" />
+    <Content Include="Seal\chs_invoice.gif" />
+    <Content Include="Seal\CSC_Invoice.png" />
+    <Content Include="Seal\Google.jpg" />
+    <Content Include="Seal\SOGO.jpg" />
+    <Content Include="SYS\ApplyFlowBranch.aspx" />
+    <Content Include="SYS\ApplyUserMenu.aspx" />
+    <Content Include="SYS\EditMemberMenu.aspx" />
+    <Content Include="SYS\EditMenuNodes.aspx" />
+    <Content Include="SYS\MaintainAnnouncement.aspx" />
+    <Content Include="SYS\MaintainCategoryDefinition.aspx" />
+    <Content Include="SYS\MaintainMemberUserRole.aspx" />
+    <Content Include="SYS\MaintainMenuControl.aspx" />
+    <Content Include="SYS\MaintainOrganizationCategory.aspx" />
+    <Content Include="SYS\MaintainUserProfile.aspx" />
+    <Content Include="SYS\MaintainUserRole.aspx" />
+    <Content Include="SYS\MaintainUserRoleDefinition.aspx" />
+    <Content Include="SYS\CreateDefaultSigner.aspx" />
+    <Content Include="SYS\ApplyFlowControl.aspx" />
+    <Content Include="SYS\MaintainDocumentFlow.aspx" />
+    <Content Include="SYS\MaintainDocumentTypeFlow.aspx" />
+    <Content Include="template\ContentControlTemplate.ascx" />
+    <Content Include="EIVO\InquireInvoiceItem.aspx" />
+    <Content Include="EIVO\InquireInvoiceAllowance.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="_test\Test0401.aspx" />
+    <Content Include="_test\Web.config" />
+    <Content Include="Scripts\jquery-1.11.3.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Visitor\Visitor.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Published\CaptchaImg.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Published\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="template\main_page.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Thumbs.db" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Published\DumpExceptionLog.ashx" />
+    <Content Include="Published\GetInvoicePDF.ashx" />
+    <None Include="Published\ImportCompany.csv" />
+    <Content Include="Published\UploadAttachment.ashx" />
+    <None Include="Published\ImportCompany.xlsx" />
+    <Content Include="Published\NotifyCommissionedToReceiveInvoice.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IFS-EIVO03\Business\Business.csproj">
+      <Project>{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eIVOGo\eIVOGo.csproj">
+      <Project>{9E9ABA84-E224-4984-991C-6584573404B3}</Project>
+      <Name>eIVOGo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{2F1547B6-2DD4-4A57-A40F-258103591603}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uxet.Com\Uxnet.Com.csproj">
+      <Project>{72edd90c-e7fe-44f4-8b9b-c9512f02d547}</Project>
+      <Name>Uxnet.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uxet.Web\Uxnet.Web.csproj">
+      <Project>{44839c05-8a69-4331-89eb-761509cd68eb}</Project>
+      <Name>Uxnet.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9124</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9155/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
