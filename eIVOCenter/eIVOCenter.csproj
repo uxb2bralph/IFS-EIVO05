@@ -1642,8 +1642,8 @@
     <Content Include="Published\NotifyCommissionedToReceiveInvoice.ashx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\IFS-EIVO03\Business\Business.csproj">
-      <Project>{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}</Project>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{8cf5d523-2ab2-4a61-9660-5ab9e36f48d6}</Project>
       <Name>Business</Name>
     </ProjectReference>
     <ProjectReference Include="..\eIVOGo\eIVOGo.csproj">

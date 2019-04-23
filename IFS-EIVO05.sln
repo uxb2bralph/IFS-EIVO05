@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eIVOCenter", "eIVOCenter\eIVOCenter.csproj", "{0B11DCD8-FAD5-4A8D-A833-9D682349C363}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "..\IFS-EIVO03\Business\Business.csproj", "{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{2F1547B6-2DD4-4A57-A40F-258103591603}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eIVOGo", "eIVOGo\eIVOGo.csproj", "{9E9ABA84-E224-4984-991C-6584573404B3}"
@@ -18,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uxnet.Com", "Uxet.Com\Uxnet.Com.csproj", "{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uxnet.Web", "Uxet.Web\Uxnet.Web.csproj", "{44839C05-8A69-4331-89EB-761509CD68EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,16 +39,6 @@ Global
 		{0B11DCD8-FAD5-4A8D-A833-9D682349C363}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{0B11DCD8-FAD5-4A8D-A833-9D682349C363}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0B11DCD8-FAD5-4A8D-A833-9D682349C363}.Release|x86.ActiveCfg = Release|Any CPU
-		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|x86.ActiveCfg = Release|Any CPU
 		{2F1547B6-2DD4-4A57-A40F-258103591603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2F1547B6-2DD4-4A57-A40F-258103591603}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F1547B6-2DD4-4A57-A40F-258103591603}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -115,6 +105,18 @@ Global
 		{44839C05-8A69-4331-89EB-761509CD68EB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{44839C05-8A69-4331-89EB-761509CD68EB}.Release|x86.ActiveCfg = Release|Any CPU
 		{44839C05-8A69-4331-89EB-761509CD68EB}.Release|x86.Build.0 = Release|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Debug|x86.Build.0 = Debug|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{8CF5D523-2AB2-4A61-9660-5AB9E36F48D6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

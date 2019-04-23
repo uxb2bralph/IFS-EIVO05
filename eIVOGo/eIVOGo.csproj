@@ -3163,7 +3163,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\IFS-EIVO03\Business\Business.csproj">
+    <ProjectReference Include="..\Business\Business.csproj">
       <Project>{8cf5d523-2ab2-4a61-9660-5ab9e36f48d6}</Project>
       <Name>Business</Name>
     </ProjectReference>
