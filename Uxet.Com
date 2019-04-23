@@ -1,1 +1,1 @@
-C:/Project/VM-SIT04/Uxnet/Uxnet.Com
+../Uxnet/Uxnet.Com
