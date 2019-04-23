@@ -266,7 +266,7 @@ doc_it/
 
 # Test Folder
 eIVOGo/_test/
-[Tt]emp*/
+[Tt]emp/
 OLD_NET40/
 MyInvoiceInstaller/
 VDD/
