@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main_page.Master.cs"
+    Inherits="eIVOGo.main_page" %>
+
+<%@ Register Src="../Module/UI/PageMenuBar.ascx" TagName="PageMenuBar" TagPrefix="uc1" %>
+<script runat="server">
+    protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+        this.Load += new EventHandler(template_main_page_master_Load);
+    }
+
+    void template_main_page_master_Load(object sender, EventArgs e)
+    {
+        Page.ClientScript.RegisterClientScriptInclude("jQuery", VirtualPathUtility.ToAbsolute("~/Scripts/jquery-1.4.1.js"));
+    }
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>電子發票系統</title>
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server"  >
+        <asp:ToolkitScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/Scripts/jquery-2.1.1.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery-ui-1.11.3.js" />
+                <asp:ScriptReference Path="~/Scripts/bootstrap.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.ui.datepicker-zh-TW.js" />
+            </Scripts>
+        </asp:ToolkitScriptManager>
+    <div id="header" runat="server"   clientidmode ="Static">
+        <div class="logo">
+            <img id="Img3" runat="server" enableviewstate="False" src="~/images/header_logo.jpg"
+                width="505" height="90" alt="" border="0" />
+        </div>
+        <div class="public">
+            <div id="logout" runat="server">
+                <a id="alogout" runat="server" enableviewstate="false" href="~/Logout.aspx" target="_parent">
+                    <img runat="server" enableviewstate="false" id="img4" src="~/images/icon_logout.png"
+                        width="34" height="34" border="0" alt="" /><br />
+                    登出</a></div>
+            <%--<div id="regist" runat="server">
+                <a runat="server" enableviewstate="false" href="~/SAM/AddMember.aspx" target="_parent">
+                    <img id="Img5" runat="server" enableviewstate="false" src="~/images/icon_join.png" width="34" height="34" border="0" alt="" /><br />
+                    加入會員</a></div>--%>
+            <%--<div >
+                <a href="https://www.einvoice.nat.gov.tw/wSite/ct?xItem=15&ctNode=30" target="_blank">
+                    <img id="Img6" runat="server" enableviewstate="false" src="~/images/icon_link.png" width="34" height="34" border="0" alt="" /><br />
+                    全民稽核連線</a></div>--%>
+            <%--<div id="cardBelong" runat="server" visible="false">
+                <a runat="server" enableviewstate="false" href="~/SAM/cardBelong.aspx" target="_parent">
+                    <img runat="server" enableviewstate="false" id="img7" src="~/images/icon_device.png" width="34" height="34" border="0" alt="" /><br />
+                    會員載具歸戶</a></div>--%>
+        </div>
+    </div>
+    <div class="pub" id="hearder2" runat="server"   clientidmode ="Static">
+        <div class="nomopic">
+            <img id="Img8" runat="server" enableviewstate="false" src="~/images/pub_pic.jpg"
+                width="290" height="30" border="0" alt="" />
+        </div>
+        <div class="note">
+            <span>[ <a runat="server" enableviewstate="false" href="~/MainPage.aspx">首頁</a> ]</span><span>登入：<asp:Label
+                ID="lblRole" runat="server"></asp:Label></span><span>登入日期：<% =DateTime.Now.ToShortDateString() %></span>
+        </div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="main_txt">
+        <tr>
+            <td valign="top" class="side_body" width="215" height="450">
+                <uc1:PageMenuBar ID="PageMenuBar1" runat="server" />
+            </td>
+            <td valign="top">
+                <div class="content_body">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#c5e08a" id="footer" runat="server"   clientidmode ="Static">
+        <tr>
+            <td width="208" height="26" bgcolor="#d9e28e">
+                &nbsp;
+            </td>
+            <td align="right">
+                <span class="copyright">Powered by UXB2B</span>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
